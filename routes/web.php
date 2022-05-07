@@ -26,7 +26,7 @@ Route::get('/hello', function () {
 });
 
 
-
+/*
 Route::get('/dashboard', [WallController::class, 'index'])->middleware(['auth'])->name('dashboard');
 
 Route::post('/postMessage', [WallController::class, 'postMessage'])->middleware(['auth'])->name('postMessage');
@@ -50,5 +50,10 @@ Route::get('/genre/{id}', [GenreController::class, 'show'])->middleware(['auth']
 
 //distributeur
 Route::get('/distributeur/{id}', [DistributeurController::class, 'show'])->middleware(['auth'])->name('distributeur');
+*/
 
 require __DIR__ . '/auth.php';
+
+Route::get('/{path?}', function () {
+    return view('tp');
+});
