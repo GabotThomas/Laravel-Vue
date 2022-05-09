@@ -1,5 +1,36 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/MaterialIcons-Regular.eot?88ad171795d44fae44f1fa7fd2de085b);
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(/fonts/MaterialIcons-Regular.woff2?0df457da917dc3011fe73ca96617c5ec) format("woff2"), url(/fonts/MaterialIcons-Regular.woff?97d3dada9b7001c0d756a8781c216462) format("woff"), url(/fonts/MaterialIcons-Regular.ttf?24a6611c28f373a0e1d7232b5e0ecbc1) format("truetype");
+}
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -11285,4 +11316,71 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+.spinner-border span {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner-border {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+  }
+}
+.todo_list_line.completed {
+  background-color: #198754;
+  color: #fff;
+}
+
+.select-input {
+  position: relative;
+}
+.select-input .select-list {
+  position: absolute;
+  width: 100%;
+  z-index: 4;
+}
+.select-input .select-list li {
+  cursor: pointer;
+}
+.select-input .select-list li:hover, .select-input .select-list li:focus {
+  background-color: rgb(215, 215, 215);
+}
+.select-input .select-list li.selected {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.btn.icon-btn {
+  line-height: 1;
+}
+.btn.icon-btn .spinner-border {
+  color: #fff !important;
+  width: 30px;
+  height: 30px;
+}
+.btn .material-icons {
+  font-size: 30px;
+}
+
+.btn-warning .material-icons {
+  color: #fff;
+}
+
+.todolist .form-checking {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  margin-right: 50px;
+}
+.todolist .form-checking::before {
+  content: "completed";
+  position: absolute;
+  /* top: -70%; */
+  top: 0;
+  left: 50%;
+  font-size: 12px;
+  transform: translate(-50%, -100%);
 }

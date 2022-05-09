@@ -37,14 +37,14 @@ class WallController extends Controller
         $message->delete();
         return redirect()->route('dashboard');
     }
-
+    /*
     public function updateMessage(Request $request)
     {
         $message = Message::find($request->id);
         return view('updateMessage', ['message' => $message]);
-    }
+    }*/
 
-    public function saveMessage(Request $request)
+    public function updateMessage(Request $request)
     {
         $message = Message::find($request->id);
         $message->message = $request->message;
